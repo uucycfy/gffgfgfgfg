@@ -1,0 +1,820 @@
+/* ============ СБРОС ============ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Russo One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ============ ОБЩИЕ ОБЁРТКИ ============ */
+.wrapper {
+  background: linear-gradient(180deg, #FFFFFF, #9e9e9e);
+  width: 100%;
+}
+
+.container {
+  max-width: 1350px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* ============ ШАПКА ============ */
+header {
+  padding: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+header .logo {
+  text-transform: uppercase;
+  font-size: 29px;
+  font-weight: 800;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+header nav ul li {
+  display: inline-block;
+}
+
+header nav ul li a {
+  color: black;
+}
+
+header nav ul li.active::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 5px;
+  background: #939191;
+  border-radius: 10px;
+  margin: 5px auto 0;
+}
+
+header button,
+header nav ul li.btn {
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bolder;
+  transition: all 0.3s;
+}
+
+header button:hover,
+header nav ul li.btn:hover {
+  background: #939191;
+}
+
+/* ============ HERO ============ */
+.hero {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.hero-info h2 {
+  font-size: 96px;
+}
+
+.hero-info h1 {
+  font-size: 30px;
+}
+
+/* ============ ТРЕНДЫ (услуги) ============ */
+.trending {
+  padding: 80px 0;
+}
+
+.trending h3 {
+  font-size: 24px;
+  text-align: center;
+ 
+}
+
+.trending .See-all {
+  float: right;
+  color: white;
+  background: black;
+  border-radius: 15px;
+  padding: 12px 23px;
+  transition: all 0.3s;
+}
+
+.trending .See-all:hover {
+  transform: scale(1.05);
+}
+
+.trending .games {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.trending .games h4 {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.trending .games img {
+  transition: transform 0.3s;
+}
+
+.trending .games img:hover {
+  transform: scale(1.05);
+}
+
+/* ============ ТЕКСТОВЫЕ БЛОКИ ============ */
+.big-text {
+  font-size: 96px;
+  text-align: center;
+  padding: 40px 0;
+  font-weight: 600;
+}
+
+.big-text1 {
+  font-size: 64px;
+  text-align: center;
+  padding: 40px 0;
+  font-weight: 600;
+}
+
+.banner img {
+  margin: 0 auto;
+}
+
+/* ============ ПРАЙС ============ */
+.container1 h2 {
+  font-size: 64px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.price-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 60px 15px;
+}
+
+.price-col {
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.price-col:hover {
+  transform: scale(1.03);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.price-col p {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.price-col h3 {
+  font-size: 36px;
+  margin: 20px 0;
+}
+
+.price-col h3 span {
+  font-size: 20px;
+}
+
+.price-col ul {
+  list-style: none;
+  margin: 15px 0;
+  padding: 0;
+  text-align: center;
+}
+
+.price-col ul li {
+  border-bottom: 1px solid #ddd;
+  padding: 8px 0;
+}
+
+.price-col button {
+  margin-top: 20px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.price-col button:hover {
+  background: #939191;
+}
+
+/* ============ ФОРМА (калькулятор) ============ */
+.fill {
+  background: url('img/фон.png') no-repeat center/cover;
+  width: 100%;
+}
+
+.filll {
+  position: relative;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.containerr {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; /* ⬅ выравнивание */
+  align-items: flex-start;
+  gap: 30px;
+  padding: 60px 15px;
+}
+
+.form {
+  background: #fff;
+  border-radius: 25px; /* ⬅ как раньше */
+  padding: 30px;
+  flex: 1;
+  min-width: 320px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* лёгкая тень */
+}
+
+.form1 {
+  flex: 2; /* левая часть больше */
+}
+
+.form2 {
+flex:1;
+}
+
+.form .heading {
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.switcher__item input {
+  display: none;
+}
+
+.switcher__item label {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 16px;
+  color: #000;
+  border: 2px solid black;
+  background: #eee;          /* серый фон по умолчанию */
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.switcher__item label:hover {
+  background-color: #ccc;
+}
+
+.switcher__item input:checked + label {
+  background: #000;
+color:#fff;
+}
+
+/* Слайдер */
+#time {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  background-color: #919191;  /* серый трек */
+  border-radius: 20px;
+  outline: none;
+}
+
+#time::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  background-color: black;    /* чёрный бегунок */
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Опции */
+option__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.option__item input {
+  display: none;
+}
+
+.option__item .checkmark {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background: #eee;           /* серый фон */
+  margin-right: 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  position: relative;
+}
+
+.option__item .checkmark::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  background: black;          /* чёрная галочка */
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.option__item input:checked + .checkmark::after {
+  display:block;
+}
+
+/* Итог */
+.form2 .total {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* ============ ПОДВАЛ ============ */
+.goga {
+  background: black;
+  padding: 30px;
+  text-align: center;
+}
+
+.goga h1 {
+  font-size: 18px;
+  color: white;
+}
+
+/* ============ КОНТАКТЫ ============ */
+.contact-container {
+  position: fixed;
+  right: 0;
+  bottom: 80px;
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out;
+  z-index: 9999;
+}
+
+.contact-container.visible {
+  transform: translateX(-10px);
+}
+
+.contact {
+  background: white;
+  border: 2px solid black;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  max-width: 300px;
+}
+
+.contact div {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contact ul {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+}
+
+.contact ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #eee;
+  transition: 0.3s;
+}
+
+.contact ul li a:hover {
+  background: black;
+  color: white;
+}
+
+/* Кнопка для вызова */
+.contact-btn {
+  border-radius: 30px;
+  background-color: #000;
+  border: 2px solid #454444;
+  color: #fff;
+  cursor: pointer;
+  padding: 12px 20px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10000;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.contact-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* ============ АДАПТИВ ============ */
+
+/* Планшеты */
+@media (max-width: 1024px) {
+  .hero-info h2 {
+    font-size: 72px;
+  }
+  .big-text {
+    font-size: 72px;
+  }
+  .big-text1 {
+    font-size: 48px;
+  }
+  .container1 h2 {
+    font-size: 48px;
+  }
+}
+
+/* Смартфоны (до 768px) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  header nav ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  .hero-info h2 {
+    font-size: 48px;
+  }
+  .hero-info h1 {
+    font-size: 20px;
+  }
+  .big-text {
+    font-size: 48px;
+  }
+  .big-text1 {
+    font-size: 32px;
+  }
+  .container1 h2 {
+    font-size: 36px;
+  }
+  .containerr {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 15px;
+  }
+  .form {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  header nav ul {
+    flex-direction: row;       /* вместо колонки — строка */
+    justify-content: space-around;
+    flex-wrap: wrap;           /* если не влезает, переносится */
+    gap: 8px;
+  }
+
+  header nav ul li a {
+    font-size: 14px;           /* уменьшим текст */
+    padding: 5px 8px;}
+}
+/* Телефоны (до 480px) */
+@media (max-width: 480px) {
+  header .logo {
+    font-size: 20px;
+  }
+
+  .hero-info h2 {
+    font-size: 32px;
+  }
+  .hero-info h1 {
+    font-size: 16px;
+  }
+
+  /* Заголовки секций в линию */
+  .nav-sections {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+    text-align: center;
+  }
+  .nav-sections h2 {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  /* Лучшие решения — сетка по 2 */
+  .trending .games {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .trending .games img {
+    max-width: 100px;
+    margin: 0 auto;
+  }
+
+  /* Заголовки текстовых блоков */
+  .big-text,
+  .big-text1,
+  .container1 h2 {
+    text-align: center;
+    font-size: 28px;
+  }
+
+  /* Калькулятор — кнопки сеткой */
+  .switcher {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .switcher__item label {
+    font-size: 14px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* Калькулятор — общий вид */
+  .containerr {
+    flex-direction: column;
+    align-items: center;
+  }
+  .form {
+    text-align: left;
+    padding: 20px;
+  }
+
+  /* Контакты */
+  .contact ul {
+    flex-direction: column;
+  }
+}
+/* Модальное окно */
+.modal {
+  display: none; /* скрыто по умолчанию */
+  position: fixed;
+  z-index: 100000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  font-family: "Russo One", sans-serif;
+  position: relative;
+}
+.modal-content h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.modal-content h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.modal-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  font-size: 16px;
+}
+
+.modal-content ul li {
+  margin: 8px 0;
+}
+
+.modal-content .date-box {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+  font-size: 18px;
+}
+.modal-content .phone {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.instagram-box {
+  margin: 20px 0;
+}
+
+.instagram-box a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #eee;
+  border-radius: 30px;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.instagram-box a:hover {
+  background: #000;
+  color: #fff;
+}
+
+.instagram-box img {
+  width: 32px;
+  height: 32px;
+  border-radius:50%;
+}
+
+/* Адаптив для телефонов */
+@media (max-width: 480px) {
+  .modal-content {
+    padding: 20px 15px;
+  }
+  .modal-content h1 {
+    font-size: 22px;
+  }
+  .modal-content h2 {
+    font-size: 18px;
+  }
+  .modal-content ul {
+    font-size: 14px;
+  }
+  .modal-content .date-box {
+    font-size: 16px;
+    padding: 8px 15px;
+  }
+  .modal-content .phone {
+    font-size: 14px;
+ }
+ .instagram-box a {
+  font-size: 14px;
+  padding: 8px 12px;
+  gap: 8px;
+}
+.instagram-box img {
+  width: 24px;
+  height:24px;
+}
+}
+
+.games {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.service-card img {
+  max-width: 100%;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+.service-card h4 {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+}
+
+.service-btn {
+  background: black;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 14px;
+}
+
+.service-btn:hover {
+  background: #939191;
+}
+
+/* адаптив */
+@media (max-width: 768px) {
+  .games {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .games {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .service-btn {
+    width: 100%;
+    font-size: 13px;
+    margin-top: 5px;
+  }
+  .service-card h4 {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .contact-container.visible {
+    transform: translateX(0px);
+  }
+  .contact-btn {
+    right: 10px;
+  }
+
+  /* 📌 делаем иконки в одну линию */
+  .contact ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap; /* если экран узкий, перенос аккуратный */
+    gap: 8px;
+  }
+
+  .contact ul li {
+    margin: 0;
+  }
+}
